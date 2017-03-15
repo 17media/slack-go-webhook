@@ -16,6 +16,7 @@ func main() {
 
     attachment1 := slack.Attachment {}
     attachment1.AddField(slack.Field { Title: "Author", Value: "Ashwanth Kumar" }).AddField(slack.Field { Title: "Status", Value: "Completed" })
+    attachment.MrkdwnIn = []string{"fallback", "text"}
     payload := slack.Payload {
       Text: "Hello from <https://github.com/ashwanthkumar/slack-go-webhook|slack-go-webhook>, a Go-Lang library to send slack webhook messages.\n<https://golangschool.com/wp-content/uploads/golang-teach.jpg|golang-img>",
       Username: "robot",
